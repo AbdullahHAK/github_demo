@@ -1,0 +1,12 @@
+function approveDeal() {
+    document.body.style.background = 'url("deal.jpeg") no-repeat center center fixed';
+    document.body.style.backgroundSize = "cover";
+
+    document.querySelector("h1").innerText = "Ab Hoga Comeback 🔥";
+    document.querySelector("p").innerText = "Deal Confirmed. Semester Activated.";
+
+    document.querySelector("button").style.display = "none";
+}
+
+git add .
+git commit -m "Added deal activation feature with background swap"

@@ -1,0 +1,36 @@
+<script>
+function approveDeal() {
+
+    // Background swap
+    document.body.style.background = 'url("deal.jpeg") no-repeat center center fixed';
+    document.body.style.backgroundSize = "cover";
+
+    document.querySelector("h1").innerText = "Ab Hoga Comeback 🔥";
+    document.getElementById("message").innerText = "Deal Confirmed. Semester Activated.";
+
+    document.querySelector("button").style.display = "none";
+
+    // Play music
+    const music = document.getElementById("bgMusic");
+    music.currentTime = 0;
+    music.play().catch(err => console.log(err));
+
+    // Flash effect
+    const flash = document.createElement("div");
+    flash.className = "black-flash";
+    document.body.appendChild(flash);
+
+    // Big RESPECT text
+    const respect = document.createElement("div");
+    respect.className = "respect-text";
+    respect.innerText = "GPA ∞";
+    document.body.appendChild(respect);
+
+    // Stop everything after 4 seconds
+    setTimeout(() => {
+        music.pause();
+        flash.remove();
+        respect.remove();
+    }, 6000);
+}
+</script>

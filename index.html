@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comeback Season</title>
+    <style>
+    
+    .black-flash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.7;
+    animation: blink 0.2s infinite alternate;
+    pointer-events: none;
+    z-index: 10;
+}
+
+@keyframes blink {
+    from { opacity: 0.3; }
+    to { opacity: 0.9; }
+}
+
+.respect-text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 20px red, 0 0 40px orange;
+    z-index: 20;
+    animation: zoomIn 0.6s forwards;
+}
+
+@keyframes zoomIn {
+    to {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+}
+
+
+        .fire-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: radial-gradient(circle at center, rgba(255,140,0,0.6), rgba(255,0,0,0.5));
+    animation: flame 0.3s infinite alternate;
+}
+
+@keyframes flame {
+    from { opacity: 0.4; }
+    to { opacity: 0.9; }
+}
+        body {
+            margin: 0;
+            padding: 0;
+            background: url("before_deal.jpeg") no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.6);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="overlay">
+    <h1>Comeback Karna h...? 🔥</h1>
+    <p id="message"></p>
+    <button onclick="approveDeal()">Approve The Deal 🤝</button>
+</div>
+
+
+
+
+
+
+
+
+<script>
+function approveDeal() {
+    document.body.style.background = 'url("deal.jpeg") no-repeat center center fixed';
+    document.body.style.backgroundSize = "cover";
+
+    document.querySelector("h1").innerText = "Ab Hoga Comeback 🔥";
+    document.querySelector("p").innerText = "Deal Confirmed. Semester Activated.";
+
+    document.querySelector("button").style.display = "none";
+}
+</script>
+
+
+
+<audio id="bgMusic" src="comeback.mp3"></audio>
+</body>
+</html>
