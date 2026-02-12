@@ -8,5 +8,4 @@ function approveDeal() {
     document.querySelector("button").style.display = "none";
 }
 
-git add .
-git commit -m "Added deal activation feature with background swap"
+
